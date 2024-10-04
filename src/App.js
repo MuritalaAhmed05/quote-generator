@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="bg-[#0082c8] min-h-screen px-6 py-8 flex flex-col">
       
-      <h1 className="text-white shadow-2xl text-center text-[2rem] font-bold mb-6 ">
+      <h1 className="text-white shadow-2xl text-center text-[1.5rem] sm:text-[2rem] font-bold mb-6 ">
         Random Advice Generator
       </h1>
       
@@ -38,13 +38,13 @@ function App() {
           )}
           <div className="flex justify-center gap-4 mt-6">
             <button
-              className="bg-blue-900 py-3 px-5 rounded-lg text-white font-bold hover:bg-blue-800 transition focus:outline-none focus:ring focus:ring-blue-300"
+              className="bg-blue-900 py-3 px-5 text-nowrap rounded-lg text-white font-bold hover:bg-blue-800 transition focus:outline-none focus:ring focus:ring-blue-300"
               onClick={fetchAdvice}
             >
               Generate Advice
             </button>
             <button
-              className={`bg-green-600 py-3 px-5 rounded-lg text-white font-bold hover:bg-green-500 transition focus:outline-none focus:ring focus:ring-green-300 ${!advice && 'opacity-50 cursor-not-allowed'}`}
+              className={`bg-green-600 py-3 text-nowrap  px-5 rounded-lg text-white font-bold hover:bg-green-500 transition focus:outline-none focus:ring focus:ring-green-300 ${!advice && 'opacity-50 cursor-not-allowed'}`}
               onClick={copyToClipboard}
               disabled={!advice}
             >
